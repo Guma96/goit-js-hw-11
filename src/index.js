@@ -4,12 +4,12 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import debounce from 'lodash.debounce';
 
-//-------------------------------DOM----------------------------------------
+
 const searchFormDOM = document.querySelector('.search-form');
 const inputSearchDOM = document.querySelector("[name='searchQuery']");
 const galleryDOM = document.querySelector('.gallery');
 const btnMoreDOM = document.querySelector('.load-more');
-//--------------------------------GLOBAL VARIABLES--------------------------
+
 const PIXABAY_URL = 'https://pixabay.com/api/';
 const PIXABAY_KEY = '35038551-9d962d4efc3b2f8ffaa054fa5';
 const IMG_PER_PAGE = 40;
@@ -18,7 +18,6 @@ let wordKey;
 let page;
 let lightbox = new SimpleLightbox('.gallery a');
 
-//-------------------------------FUNCTIONS----------------------------------
 const searchImages = e => {
   e.preventDefault();
   wordKey = inputSearchDOM.value.trim().split(' ').join('+');
@@ -170,7 +169,7 @@ const loadMoreImages = async () => {
 const btnMoreOn = () => (btnMoreDOM.style.display = 'block');
 const btnMoreOf = () => (btnMoreDOM.style.display = 'none');
 
-//--------------------------------LISTNER ON SUBMIT---------------------------
+
 btnMoreDOM.addEventListener('click', loadMoreImages);
 searchFormDOM.addEventListener('submit', searchImages);
 
