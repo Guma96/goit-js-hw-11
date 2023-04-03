@@ -10,7 +10,7 @@ const galleryDOM = document.querySelector('.gallery');
 const btnMoreDOM = document.querySelector('.load-more');
 
 const PIXABAY_URL = 'https://pixabay.com/api/';
-const PIXABAY_KEY = '34775826-8245aeb15fb52e6c04f01aeda';
+const PIXABAY_KEY = '35038551-9d962d4efc3b2f8ffaa054fa5';
 const IMG_PER_PAGE = 40;
 
 let wordKey;
